@@ -57,5 +57,12 @@ namespace BinarySearchTree
                 Console.WriteLine(root.Data);
             }
         }
+        public static int Size(Node root)
+        {
+            if (root == null)
+                return 0;
+            else
+                return (Size(root.Left) + 1 + Size(root.Right));
+        }
     }
 }
